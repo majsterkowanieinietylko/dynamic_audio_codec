@@ -1,0 +1,388 @@
+/*
+    DAC - Dynamic Audio Codec, a lossy audio codec written by MINT: https://www.youtube.com/@__MINT_
+    
+    This file describes UI for DAC, comes with absolutely no warranty!
+*/
+
+h1 {
+	margin-top: 3%;
+	display: block;
+	font-family: Verdana;
+	color: white;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: calc(1.4vw + 21px);
+	cursor: default;
+}
+
+.metaData {
+	width: 250px;
+	height: 33px;
+	margin-top: 13px;
+	border: 1px solid white;
+	color: white;
+	font-size: 20px;
+	font-family: Verdana;
+	background-color: #1c1c1c;
+	padding-left: 7px;
+	padding-right: 7px;
+	display: inline-block;
+	outline: none;
+}
+
+.btn {
+	height: 30px;
+	border: 1px solid white;
+	color: white;
+	font-size: 18px;
+	font-family: Verdana;
+	background-color: #1c1c1c;
+	cursor: pointer;
+	opacity: 1;
+	transition: 0.3s opacity;
+	display: inline-block;
+	outline: none;
+}
+
+.btn:hover {
+	box-shadow: 0px 0px 3px 0.7px #b2b2b2;
+}
+
+.contentBox {
+	display: inline-block;
+	position: relative;
+	background-color: #1e1e1e;
+	border: 3px solid white;
+	border-radius: 4px;
+	color: white;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 23px;
+	vertical-align: top;
+	pointer-events: all;
+	box-shadow: 2px 2px 6px 0px #a7a7a7;
+	overflow: hidden;
+	white-space: normal;
+	cursor: default;
+}
+
+.slider {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	width: 46px;
+	height: 24px;
+}
+
+.slider input {
+	display: none;
+}
+
+.switch:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 4px;
+	bottom: 3px;
+	background-color: #fff;
+	transition: 0.2s;
+	border-radius: 50%;
+}
+
+.switch {
+	position: absolute;
+	background-color: #ccc;
+	transition: 0.2s;
+	border-radius: 20px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+input:checked + .switch:before {
+	transform: translateX(20px);
+}
+
+input:checked + .switch {
+	background-color: #18e518;
+}
+
+.horSlider {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	outline: none;
+}
+
+.horSlider::-webkit-slider-runnable-track {
+  height: 6px;
+  cursor: pointer;
+  border-radius: 2px;
+  background: #eee;
+}
+
+.horSlider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 20px;
+	width: 8px;
+	border-radius: 2px;
+	background: #18e518;
+	cursor: pointer;
+	margin-top: -7px;
+	border: none;
+}
+
+progress {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 400px;
+	height: 13px;
+}
+
+progress::-webkit-progress-bar {
+	background: #eee;
+	border-radius: 2px;
+}
+
+progress:not([value="0"])::-webkit-progress-value {
+	background: #18e518;
+    border-radius: 2px;
+	box-shadow: 0px 0px 5px 1px #18e518;
+}
+
+.sliderBox {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	margin-top: 150px;
+	vertical-align: top;
+	float: left;
+}
+
+.sliderBg {
+	background-color: #3a3a3a;
+	border-radius: 3px;
+	display: inline-block;
+	position: absolute;
+	margin-left: 55px;
+	margin-top: -129px;
+	z-index: 0;
+	width: 105px;
+	height: 202px;
+	top: -2px;
+	left: -4px;
+}
+
+.sliderDesc {
+	font-size: 11px;
+	font-family: Verdana;
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	margin-left: 61px;
+	margin-top: -128px;
+	white-space: nowrap;
+	z-index: 1;
+	cursor: default;
+}
+
+.minVal {
+	font-size: 9px;
+	font-family: Verdana;
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	margin-top: 41px;
+	margin-left: 62px;
+	white-space: nowrap;
+	z-index: 1;
+	cursor: default;
+}
+
+.topVal {
+	font-size: 9px;
+	font-family: Verdana;
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	margin-left: 57px;
+	margin-top: -78px;
+	white-space: nowrap;
+	z-index: 1;
+	cursor: default;
+}
+
+.currVal {
+	font-size: 13px;
+	font-family: Verdana;
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	margin-left: 93px;
+	margin-top: -110px;
+	white-space: nowrap;
+	z-index: 1;
+	cursor: default;
+}
+
+.applyBox {
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	display: block;
+	background-color: #505050;
+	position: absolute;
+	margin-left: 74px;
+	margin-top: -106px;
+	z-index: 1;
+	vertical-align: top;
+}
+
+.applyBox:checked {
+	background-color: #18f518;
+	box-shadow: 0px 0px 4px 1px #18e518;
+	border: none;
+}
+
+.vertSlider {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	outline: none;
+	transform: rotate(270deg);
+	transform-origin: center;
+	width:150px;
+	height:20px;
+	margin-left: 29px;
+	margin-top: -22px;
+	cursor:pointer;
+	display:inline-block;
+	position: absolute;
+	z-index: 1;
+}
+
+.vertSlider::-webkit-slider-runnable-track {
+  height: 6px;
+  cursor: pointer;
+  border-radius: 2px;
+  background: #eee;
+}
+
+.vertSlider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 20px;
+	width: 30px;
+	border-radius: 2px;
+	cursor: pointer;
+	margin-top: -7px;
+	background: linear-gradient(to right, #16b516 0%, #18f518 30%, #18f518 47%, #222 47%, #222 53%, #18f518 53%, #18f518 70%, #16b516 100%);
+	border: none;
+}
+
+.prevBtn {
+	width: 20px;
+	height: 12px;
+	margin-top: 12px;
+	border: none;
+	background-color: transparent;
+	position: relative;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+	outline: none;
+}
+
+.revBtn::before,
+.revBtn::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -5%;
+	left: 0%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7px 12px 7px 0;
+	border-color: transparent #fff transparent transparent;
+}
+
+.revBtn::after {
+	left: 50%;
+}
+
+.playBtn::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -35%;
+	left: 5%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 0 12px 18px;
+	border-color: transparent transparent transparent #fff;
+}
+
+.pauseBtn::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -20%;
+	left: -5%;
+	width: 0;
+	height: 0;
+	border: 10px solid #fff;
+}
+
+.ffBtn::before,
+.ffBtn::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -5%;
+	left: 0%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7px 0 7px 12px;
+	border-color: transparent transparent transparent #fff;
+}
+
+.ffBtn::after {
+	left: 50%;
+}
+
+select {
+	height: 23px;
+	font-size: 12px;
+	font-family: Verdana;
+	color: #fff;
+	background-color: #1c1c1c;
+	border: 1px solid #fff;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	padding-left: 3px;
+	vertical-align: top;
+}
+
+select:hover {
+	box-shadow: 0px 0px 3px 0.7px #b2b2b2;
+}
+
+.selectDesc {
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: default;
+}
